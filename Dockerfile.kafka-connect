@@ -1,0 +1,7 @@
+FROM confluentinc/cp-kafka-connect:latest
+
+# MongoDB source and sink connector plugins
+RUN confluent-hub install --no-prompt mongodb/kafka-connect-mongodb:latest
+
+# Elasticsearch sink connector plugin
+RUN confluent-hub install --no-prompt confluentinc/kafka-connect-elasticsearch:latest
